@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Press+Start+2P&family=VT323&display=swap');
+
+/* Global Sharp Edges */
+* {
+    border-radius: 0px !important;
+}
+
+/* Completely hide sidebar, header, footer, and collapse toggles */
+#MainMenu,
+header,
+footer,
+[data-testid="stSidebar"],
+[data-testid="collapsedControl"],
+[data-testid="stSidebarCollapsedControl"],
+section[data-testid="stSidebar"] {
+    display: none !important;
+}
+
+/* Main Workspace Container */
+.block-container {
+    max-width: 1060px !important;
+    padding-top: 1.8rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Global Pixel Art Crispness */
+img, canvas, svg, [data-testid="stImage"] img {
+    image-rendering: pixelated !important;
+    image-rendering: crisp-edges !important;
+}
+
+/* Base Viewport & Body */
+.stApp {
+    image-rendering: pixelated;
+    color: #E0FBFC !important;
+}
+
+/* Safe Typography: Apply IBM Plex Mono to text elements while protecting Material Icons */
+body, p, li, label, input, textarea, button, [data-testid="stMarkdownContainer"] {
+    font-family: 'IBM Plex Mono', monospace;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+/* Protect Streamlit Material Symbols Icons */
+[data-testid="stIconMaterial"],
+.material-symbols-rounded,
+.material-symbols-outlined,
+[data-testid="stExpanderToggleIcon"] {
+    font-family: 'Material Symbols Rounded', 'Material Symbols Outlined' !important;
+}
+
+/* Section Subheaders */
+.pixel-section-tag {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.82rem;
+    color: #48CAE4;
+    letter-spacing: 0.8px;
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Inline Code Badges */
+code {
+    background: #0D2137 !important;
+    color: #72EFDD !important;
+    border: 1px solid #1E4E68 !important;
+    padding: 1px 6px !important;
+    border-radius: 0px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* 2-Column Control Bar: Selectbox styling */
+.stSelectbox [data-baseweb="select"] > div {
+    background: rgba(7, 14, 26, 0.85) !important;
+    border: 1px solid #1B3B53 !important;
+    border-radius: 0px !important;
+    height: 42px !important;
+    color: #E0FBFC !important;
+    box-sizing: border-box !important;
+}
+
+.stSelectbox [data-baseweb="select"]:focus-within > div {
+    border: 1px solid #48CAE4 !important;
+    outline: none !important;
+}
+
+/* 2-Column Control Bar: Reset Button styling */
+button[data-testid="baseButton-secondary"],
+button[kind="secondary"] {
+    background: rgba(12, 32, 48, 0.85) !important;
+    border: 1px solid #48CAE4 !important;
+    color: #90E0EF !important;
+    box-shadow: 0 0 12px rgba(72, 202, 228, 0.25) !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.8px !important;
+    height: 42px !important;
+    border-radius: 0px !important;
+    transition: none !important;
+    box-sizing: border-box !important;
+}
+
+button[data-testid="baseButton-secondary"]:hover,
+button[kind="secondary"]:hover {
+    background: rgba(16, 44, 66, 0.95) !important;
+    border: 1px solid #72EFDD !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 0 16px rgba(114, 239, 221, 0.4) !important;
+}
+
+/* Primary Action Buttons */
+button[data-testid="baseButton-primary"],
+button[kind="primary"] {
+    background: rgba(12, 32, 48, 0.9) !important;
+    border: 1px solid #48CAE4 !important;
+    color: #90E0EF !important;
+    box-shadow: 0 0 12px rgba(72, 202, 228, 0.25) !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.8px !important;
+    height: 42px !important;
+    border-radius: 0px !important;
+    box-sizing: border-box !important;
+}
+
+button[data-testid="baseButton-primary"]:hover,
+button[kind="primary"]:hover {
+    background: rgba(16, 44, 66, 0.95) !important;
+    border: 1px solid #72EFDD !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 0 16px rgba(114, 239, 221, 0.4) !important;
+}
+
+/* Minimalist Underline Tab Bar */
+.stTabs [data-baseweb="tab-list"] {
+    border-bottom: 1px solid #162E45 !important;
+    gap: 28px !important;
+    background: transparent !important;
+}
+
+.stTabs button[data-baseweb="tab"] {
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.85rem !important;
+    color: #8FA8BE !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 4px !important;
+    border-radius: 0px !important;
+}
+
+.stTabs button[data-baseweb="tab"][aria-selected="true"] {
+    color: #5CE1E6 !important;
+    border-bottom: 2px solid #5CE1E6 !important;
+    background: transparent !important;
+}
+
+.stTabs button[data-baseweb="tab"]:hover {
+    color: #5CE1E6 !important;
+}
+
+/* Custom File Uploader Frame & Dropzone */
+[data-testid="stFileUploader"] {
+    background: transparent !important;
+    border: none !important;
+    box-sizing: border-box !important;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    background: rgba(6, 13, 24, 0.78) !important;
+    border: 1px solid #1B3B53 !important;
+    border-radius: 0px !important;
+    padding: 14px 18px !important;
+    box-sizing: border-box !important;
+}
+
+[data-testid="stFileUploaderDropzone"] button {
+    border: 1px solid #3A7CA5 !important;
+    background: rgba(11, 25, 44, 0.9) !important;
+    color: #A8DADC !important;
+    border-radius: 0px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.8px !important;
+    height: 38px !important;
+    padding: 0 18px !important;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background: rgba(18, 40, 70, 0.95) !important;
+    border-color: #5CE1E6 !important;
+    color: #FFFFFF !important;
+}
+
+/* Form Text Inputs and Textareas */
+.stTextInput input,
+.stTextArea textarea {
+    background: rgba(6, 13, 24, 0.78) !important;
+    border: 1px solid #1B3B53 !important;
+    color: #E0FBFC !important;
+    border-radius: 0px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border: 1px solid #48CAE4 !important;
+    box-shadow: 0 0 8px rgba(72, 202, 228, 0.25) !important;
+    outline: none !important;
+}
+
+/* Expanders */
+div[data-testid="stExpander"] {
+    background: rgba(6, 13, 24, 0.88) !important;
+    border: 1px solid #1B3B53 !important;
+    border-radius: 0px !important;
+    box-sizing: border-box !important;
+    margin-bottom: 8px !important;
+}
+
+div[data-testid="stExpander"] summary {
+    font-family: 'VT323', monospace !important;
+    font-size: 19px !important;
+    color: #48CAE4 !important;
+    padding: 8px 12px !important;
+}
+
+div[data-testid="stExpander"] summary:hover {
+    color: #F4A236 !important;
+}
+
+.pixel-hr {
+    border: none;
+    border-top: 1px dashed #162E45;
+    margin: 16px 0;
+}
+
+.pixel-ptr-pill {
+    background: #04070E;
+    border: 1px solid #48CAE4;
+    color: #48CAE4;
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+    padding: 2px 8px;
+}
+
